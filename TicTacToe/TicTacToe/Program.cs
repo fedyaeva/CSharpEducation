@@ -115,10 +115,13 @@ class Program
         }
         void CheckDrow()
         {
-           if (moveCount == 9) {
-               Console.WriteLine($"Ничья!"); 
-               gameEnded = true; 
-           }
+            if (!gameEnded)
+            { if (moveCount == 9) 
+                { 
+                    Console.WriteLine($"Ничья!"); 
+                    gameEnded = true;
+                }
+            }
         }
 }
 }
