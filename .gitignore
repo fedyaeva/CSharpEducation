@@ -364,6 +364,8 @@ MigrationBackup/
 .idea/**/shelf
 
 # Generated files
+/.idea/
+.idea/
 .idea/**/contentModel.xml
 
 # Sensitive or high-churn files
