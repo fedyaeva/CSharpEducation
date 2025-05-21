@@ -21,7 +21,7 @@ class Program
         void Move(){
         //Ввод ячейки
         int number;
-        while (true)
+        while (!gameEnded)
         {
             Console.WriteLine($"Игрок {currentPlayer}, ваш ход. Введите номер ячейки от 1 до 9."); 
             string enteredValue = Console.ReadLine();
