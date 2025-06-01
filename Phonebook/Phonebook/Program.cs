@@ -5,20 +5,16 @@ class Program
     static void Main(string[] args)
     {
         Phonebook phonebook = Phonebook.GetInstance();
-        Abonent abonent = new Abonent();
         phonebook.LoadAbonentFromFile();
         bool exit = false;
         
  while (!exit)
         {
             Console.WriteLine("Выберите действие: 1- добавить абонента, 2 - удалить абонента, 3 - Найти абонента по номеру, 4 - найти абонента по имени, 5 - выход");
-            string enteredValue = Console.ReadLine();
-
-            if (int.TryParse(enteredValue, out int choice))
-            {
+            string choice = Console.ReadLine();
                 switch (choice)
                 {
-                    case 1:
+                    case "1":
                         Console.WriteLine("Введите имя:");
                         string name = Console.ReadLine();
                         Console.WriteLine("Введите телефон:");
@@ -28,15 +24,14 @@ class Program
                         phonebook.AddAbonent(newAbonent);
                         break;
 
-                    case 2:
+                    case "2":
                         Console.Write("Введите номер телефона для удаления: ");
                         string deletedNumber = Console.ReadLine();
-
-                        Abonent tempAbonent = new Abonent { PhoneNumber = deletedNumber };
+                        Abonent tempAbonent = new Abonent {PhoneNumber = deletedNumber};
                         phonebook.DeleteAbonent(tempAbonent);
                         break;
 
-                    case 3:
+                    case "3":
                         Console.Write("Введите номер телефона: ");
                         string searchNumber = Console.ReadLine();
 
@@ -47,7 +42,7 @@ class Program
                             Console.WriteLine("Абонент не найден.");
                         break;
 
-                    case 4:
+                    case "4":
                         Console.Write("Введите имя: ");
                         string searchName = Console.ReadLine();
 
@@ -58,19 +53,14 @@ class Program
                             Console.WriteLine("Абонент не найден.");
                         break;
 
-                    case 5:
-                        exit = true; // Выход из программы
+                    case "5":
+                        exit = true;
                         break;
 
                     default:
-                        Console.WriteLine("Некорректный выбор. Попробуйте снова.");
+                        Console.WriteLine("Необходимо выбрать вариант от 1 до 4, попробуйте снова");
                         break;
                 }
-            }
-            else
-            {
-                Console.WriteLine("Пожалуйста, введите число от 1 до 5");
-            }
         }
     }
 }

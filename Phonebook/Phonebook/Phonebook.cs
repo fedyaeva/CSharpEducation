@@ -97,21 +97,21 @@ public class Phonebook
     /// <param name="abonent"></param>
     public void DeleteAbonent(Abonent abonent)
     {
-        int deleted = -1;
+        int index = -1;
         for (int i = 0; i < abonents.Count; i++)
         {
             if (abonents[i].PhoneNumber == abonent.PhoneNumber)
             {
-                deleted = i;
+                index = i;
                 break;
             }
         }
-        if (deleted != -1)
+
+        if (index != -1)
         {
-            abonents.Remove(abonents[deleted]);
-            SaveAbonentToFile(abonents[deleted]);
-            Console.WriteLine("Абонент удален");
+            abonents.RemoveAt(index);
             SaveAllToFile();
+            Console.WriteLine("Абонент удален");
         }
         else
         {
