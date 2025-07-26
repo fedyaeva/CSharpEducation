@@ -1,4 +1,6 @@
-﻿namespace EmployeeAccountSystem;
+﻿using System;
+
+namespace EmployeeAccountSystem;
 
 class Program
 {

@@ -1,29 +1,47 @@
+using System;
+
 namespace EmployeeAccountSystem;
 
 /// <summary>
-/// Сотрудники
+/// Сотрудники.
 /// </summary>
 public abstract class Employee
 {
-
-    public string name { get; set; }
-    public decimal baseSalary  { get; set; }
+    /// <summary>
+    /// Имя.
+    /// </summary>
+    public string Name { get; set; }
     
-    public Guid id { get; set; }
-
+    /// <summary>
+    /// Зарплата.
+    /// </summary>
+    public decimal BaseSalary  { get; set; }
+    
+    /// <summary>
+    /// ИД.
+    /// </summary>
+    public Guid Id { get; set; }
+    
+    /// <summary>
+    /// Расчет зарплаты сотрудника.
+    /// </summary>
+    /// <returns>Рассчитанная зарплата.</returns>
+    public abstract decimal CalculateSalary();
+    
+    /// <summary>
+    /// Создание сотрудника с заданным ИД.
+    /// </summary>
+    /// <param name="id">ИД.</param>
     protected Employee(Guid id)
     {
-        this.id = id;
+        this.Id = id;
     }
 
+    /// <summary>
+    /// Создание сотрудника без параметров.
+    /// </summary>
     protected Employee()
     {
         
     }
-
-    /// <summary>
-    /// Расчет зарплаты сотрудника
-    /// </summary>
-    /// <returns></returns>
-    public abstract decimal CalculateSalary();
 }
