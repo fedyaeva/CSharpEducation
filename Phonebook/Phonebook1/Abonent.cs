@@ -1,4 +1,4 @@
-namespace Phonebook;
+namespace Phonebook1;
 
 public class Abonent
 {
