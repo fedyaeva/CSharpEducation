@@ -1,4 +1,6 @@
-﻿namespace Phonebook.Tests;
+﻿using System;
+
+namespace Phonebook.Tests;
 
 class Program
 {

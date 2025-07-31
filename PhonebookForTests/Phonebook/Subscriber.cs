@@ -1,4 +1,7 @@
-﻿namespace Phonebook;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Phonebook;
 
 /// <summary>
 /// Абонент справочника.
