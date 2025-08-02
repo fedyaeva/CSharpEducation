@@ -43,6 +43,7 @@ class Program
     }
     
      #region Методы
+     
     /// <summary>
    /// Процесс добавления сотрудника.
    /// </summary>
@@ -230,5 +231,6 @@ class Program
             Console.WriteLine($"Расчитаная зарплата: {partTimeEmployee.CalculateSalary()}");
         }
     }
+    
     #endregion
 }

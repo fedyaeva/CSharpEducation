@@ -15,6 +15,7 @@ public class EmployeeManager<T> : IEmployeeManager<T> where T : Employee
     private List<T> employees = new List<T>();
 
     #region IEmployeeManager
+    
     public void Add(T employee)
     {
         if (employees.Exists(e => e.Name == employee.Name))
@@ -54,5 +55,6 @@ public class EmployeeManager<T> : IEmployeeManager<T> where T : Employee
             throw new EmployeeNotFoundException($"Сотрудник с ИД {id} не найден");
         employees.RemoveAt(index);
     }
+    
     #endregion
 }
