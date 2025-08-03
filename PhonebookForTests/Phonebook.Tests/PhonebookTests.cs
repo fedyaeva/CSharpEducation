@@ -66,7 +66,6 @@ public class PhonebookTests
         var newSubscriber = subscriber1;
         
         //Act
-        phonebook.AddSubscriber(subscriber1);
         
         phonebook.AddSubscriber(newSubscriber);
 
